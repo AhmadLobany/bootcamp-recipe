@@ -6,3 +6,9 @@ $('button').on('click', function () {
         renderer.render(data)
     })
 })
+
+
+$('#container').on('click','img',function() {
+    const firstEle = $(this).siblings('ul').find('li').html()
+    console.log(firstEle)
+})
