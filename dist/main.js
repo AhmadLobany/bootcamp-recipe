@@ -6,4 +6,4 @@ $('button').on('click', function () {
 })
 
 
-$('#container').on('click', 'img', () => console.log($(this).siblings('ul').find('li').html()))
+$('#container').on('click', 'img', function () {console.log($(this).siblings('ul').find('li').html())})
