@@ -1,8 +1,8 @@
-
+let renderer = new Renderer();
 
 $('button').on('click', function () {
     const ingredient =$('input').val()
     $.get(`/recipes/${ingredient}`,function(data) {
-        recipes = data
+        renderer.render(data)
     })
 })
