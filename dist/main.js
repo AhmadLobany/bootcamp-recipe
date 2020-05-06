@@ -1,14 +1,9 @@
-let renderer = new Renderer();
+const renderer = new Renderer();
 
 $('button').on('click', function () {
-    const ingredient =$('input').val()
-    $.get(`/recipes/${ingredient}`,function(data) {
-        renderer.render(data)
-    })
+    const ingredient = $('input').val()
+    $.get(`/recipes/${ingredient}`, (data) => renderer.render(data))
 })
 
 
-$('#container').on('click','img',function() {
-    const firstEle = $(this).siblings('ul').find('li').html()
-    console.log(firstEle)
-})
+$('#container').on('click', 'img', () => console.log($(this).siblings('ul').find('li').html()))
